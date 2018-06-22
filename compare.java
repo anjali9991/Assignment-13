@@ -1,37 +1,37 @@
+
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Comparator;
 public class compare{
 public static void main(String[] args)
 {
-	Student c=new Student(1,"Anjali",19);
-	Student c1=new Student(2,"Akshit",15);
-	Student c2=new Student(3,"Aastha",21);
-	Student c3=new Student(4,"Prashansa",19);
-	ArrayList<Student>list=new ArrayList<Student>();
+	Person c=new Person(1,"Anjali",19);
+	Person c1=new Person(2,"Akshit",15);
+	Person c2=new Person(3,"Aastha",21);
+	Person c3=new Person(4,"Prashansa",19);
+	ArrayList<Person>list=new ArrayList<Person>();
 	list.add(c);
 	list.add(c1);
 	list.add(c2);
 	list.add(c3);
 	Collections.sort(list);
-	for(Student a:list)
+	for(Person a:list)
 	{
 		System.out.println("Rollno="+a.id+" "+"Name="+a.name+" "+"Age="+a.age);
 	}
 }
 }
-class Student implements Comparable<Student>
+class Person implements Comparable<Person>
 {
 	int id;
 	String name;
 	int age;
-	Student(int id,String name,int age)
+	Person(int id,String name,int age)
 	{
 		this.id=id;
 		this.name=name;
 		this.age=age;
 	}
-	public int compareTo(Student s)
+	public int compareTo(Person s)
 	{
 		int compareName=name.compareTo(s.name);
 		if((age>s.age)&&(compareName==0))
